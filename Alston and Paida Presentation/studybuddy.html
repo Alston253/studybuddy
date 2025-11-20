@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyBuddy Hub</title>
+
+    <!-- ALL CSS HERE -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #E0F2FE;
+        }
+
+        header {
+            background: #1E3A8A;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        section {
+            padding: 50px 20px;
+            display: none; /* default hidden */
+        }
+
+        #home {
+            display: block; /* home is visible */
+        }
+
+        .hero {
+            text-align: center;
+            background: #FACC15;
+            padding: 60px 20px;
+            border-radius: 10px;
+        }
+
+        .button {
+            background: #1E3A8A;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 6px;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            width: 280px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #999;
+            text-align: center;
+        }
+
+        footer {
+            background: #1E3A8A;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        @media(max-width: 600px) {
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>StudyBuddy Hub</h1>
+        <nav>
+            <a href="#" onclick="showPage('home')">Home</a>
+            <a href="#" onclick="showPage('resources')">Resources</a>
+            <a href="#" onclick="showPage('tutoring')">Tutoring</a>
+            <a href="#" onclick="showPage('about')">About</a>
+            <a href="#" onclick="showPage('contact')">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HOME PAGE -->
+    <section id="home">
+        <div class="hero">
+            <h2>Helping Students Study Smarter, Not Harder</h2>
+            <p>Access study resources, book tutors, and stay organized — all in one place.</p>
+            <a class="button" onclick="showPage('resources')">Explore Resources</a>
+        </div>
+
+        <h2 style="text-align:center; margin-top:50px">Our Services</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Study Resources</h3>
+                <p>Past papers, notes, and revision guides.</p>
+                <a class="button" onclick="showPage('resources')">View</a>
+            </div>
+
+            <div class="card">
+                <h3>Book Tutors</h3>
+                <p>Affordable and professional tutors anytime.</p>
+                <a class="button" onclick="showPage('tutoring')">Book Now</a>
+            </div>
+
+            <div class="card">
+                <h3>Study Planner</h3>
+                <p>Organize your day with our study tools.</p>
+                <a class="button">Coming Soon</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- RESOURCES PAGE -->
+    <section id="resources">
+        <h2 style="text-align:center">Study Resources</h2>
+        <p style="text-align:center">Click a card to access real study materials.</p>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Khan Academy</h3>
+                <p>Free world-class education for anyone.</p>
+                <a class="button" href="https://www.khanacademy.org" target="_blank">Open</a>
+            </div>
+
+            <div class="card">
+                <h3>Exam Past Papers</h3>
+                <p>Download useful revision past papers.</p>
+                <a class="button" href="https://pastpapers.co" target="_blank">Visit</a>
+            </div>
+
+            <div class="card">
+                <h3>Free PDF Notes</h3>
+                <p>High-quality notes for science & maths.</p>
+                <a class="button" href="https://www.gceguide.com" target="_blank">Download</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TUTORING PAGE -->
+    <section id="tutoring">
+        <h2 style="text-align:center">Available Tutors</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Math Tutor</h3>
+                <p>Expert in algebra, calculus & stats.</p>
+                <a class="button" href="mailto:mathtutor@studybuddy.com">Book Session</a>
+            </div>
+
+            <div class="card">
+                <h3>Science Tutor</h3>
+                <p>Specialist in biology, chemistry & physics.</p>
+                <a class="button" href="mailto:sciencetutor@studybuddy.com">Book Session</a>
+            </div>
+
+            <div class="card">
+                <h3>English Tutor</h3>
+                <p>Improve grammar, vocabulary & essays.</p>
+                <a class="button" href="mailto:englishtutor@studybuddy.com">Book Session</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT PAGE -->
+    <section id="about">
+        <h2 style="text-align:center">About StudyBuddy Hub</h2>
+
+        <p style="max-width:700px; margin:20px auto; text-align:center;">
+            StudyBuddy Hub was created to solve a major student problem: lack of reliable, affordable, 
+            and well-organized academic support. Students often struggle to find correct notes, affordable tutors, 
+            and a proper study routine. Our platform provides a simple solution — everything in one place.
+        </p>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Our Mission</h3>
+                <p>To make learning accessible, affordable, and organized for every student.</p>
+            </div>
+
+            <div class="card">
+                <h3>Our Vision</h3>
+                <p>To become the #1 learning support platform for students worldwide.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT PAGE -->
+    <section id="contact">
+        <h2 style="text-align:center">Contact Us</h2>
+
+        <p style="text-align:center">Have a question? Reach out.</p>
+
+        <div style="max-width:500px; margin:auto;">
+            <label>Name</label>
+            <input style="width:100%; padding:10px;" type="text" placeholder="Your name">
+
+            <label>Email</label>
+            <input style="width:100%; padding:10px;" type="email" placeholder="Your email">
+
+            <label>Message</label>
+            <textarea style="width:100%; padding:10px;" rows="5" placeholder="Your message"></textarea>
+
+            <a class="button" style="margin-top:10px;">Send</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 StudyBuddy Hub. All rights reserved.</p>
+    </footer>
+
+    <!-- PAGE SWITCHING JS -->
+    <script>
+        function showPage(pageId) {
+            let pages = document.querySelectorAll("section");
+            pages.forEach(p => p.style.display = "none");
+
+            document.getElementById(pageId).style.display = "block";
+            window.scrollTo(0, 0);
+        }
+    </script>
+
+</body>
+</html>
+
